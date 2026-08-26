@@ -56,6 +56,17 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 .ticket-box h3{margin:0 0 10px;color:var(--navy);font-size:28px}
 .ticket-box ul{margin:0;padding-left:20px}
 .ticket-box li{margin:10px 0;font-size:18px;line-height:1.35}
+
+.food-section{padding:4px 0 16px}
+.food-shell{background:linear-gradient(180deg,#fffaf2,#fff);border:2px solid #efddbf;border-radius:28px;padding:24px 22px 26px;box-shadow:0 10px 20px rgba(0,0,0,.05)}
+.food-section h2{text-align:center;color:var(--red);font-size:40px;margin:0 0 8px}
+.food-intro{text-align:center;color:#5c6a79;font-size:18px;max-width:760px;margin:0 auto 20px}
+.food-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.food-card{background:#fff;border:2px solid #eee3d2;border-radius:22px;padding:16px 14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.05);min-height:210px}
+.food-card img{width:100%;height:92px;object-fit:contain;margin-bottom:12px}
+.food-card .food-name{font-size:18px;font-weight:900;color:#21498d;line-height:1.2}
+.food-card .food-type{margin-top:6px;font-size:13px;font-weight:700;color:#7b8692;line-height:1.2}
+
 .sponsors{padding:10px 0 56px}
 .sponsors h2{text-align:center;color:var(--red);font-size:42px;margin:0 0 8px}
 .sponsors .note{text-align:center;color:#5c6a79;margin-bottom:28px;font-size:18px}
@@ -88,13 +99,14 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 }
 @media (max-width:980px){
   .date-grid,.ticket-grid,.logo-grid.featured{grid-template-columns:1fr 1fr}
+  .food-grid{grid-template-columns:repeat(2,1fr)}
   .logo-grid.additional{grid-template-columns:repeat(3,1fr)}
   .ticket-grid .ticket-intro{grid-column:1/-1}
 }
 @media (max-width:680px){
   .topbar-inner{gap:16px}
   .top-links{gap:16px}
-  .date-grid,.ticket-grid,.logo-grid.featured,.logo-grid.additional{grid-template-columns:1fr}
+  .date-grid,.ticket-grid,.logo-grid.featured,.logo-grid.additional,.food-grid{grid-template-columns:1fr}
   .date-box + .date-box{border-left:none;border-top:2px solid #e7b14a}
   .date-text{text-align:center}
   .date-box{flex-direction:column}
@@ -125,8 +137,14 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <section class="tickets-section" id="tickets"><div class="ticket-banner"><div class="sponsor-ribbon">★ BUY TICKETS ONLINE &amp; SAVE! ★</div><a class="ticket-button" href="#" onclick="return false">BUY TICKETS HERE</a></div>
 <div class="ticket-grid"><div class="ticket-intro"><h2>Event Tickets</h2><p>🎉 Pre-purchase ticket bundles at a <strong>discounted rate by September 21, 2026.</strong> On event day, tickets are available at the door at the regular price of <strong>$1 per ticket.</strong></p><p class="deadline">Don’t miss out on the discounted bundle pricing — online sales close September 21!</p></div>
 <div class="ticket-box"><h3>How tickets work</h3><ul><li>🎨 <strong>Activities:</strong> 1 - 5 tickets per activity</li><li>🍜 <strong>Concessions / Food:</strong> 1 - 8 tickets per item</li></ul></div>
-<div class="ticket-box"><h3>Ticket pickup</h3><ul><li>Morning drop-off on <strong>September 23 and 24</strong></li><li>Or collect tickets at the <strong>event entry booth</strong> that night</li></ul></div></div></section>
-<section class="sponsors" id="sponsors"><h2>Thank You to Our Community Sponsors &amp; Partners</h2><div class="note">Tap a sponsor logo to visit their website or official page.</div>
+<div class="ticket-box"><h3>Ticket pickup</h3><ul><li>Morning drop-off on <strong>September 23 and 24</strong></li><li>Or collect tickets at the <strong>event entry booth</strong> that night</li></ul></div></section>
+<section class="food-section" id="food"><div class="food-shell"><h2>Food Available for Purchase</h2><div class="food-intro">Come hungry! Enjoy delicious food and treats from these vendors during Multicultural Night.</div><div class="food-grid">
+<a class="food-card" href="https://dimsumkingnow.com" target="_blank" rel="noopener"><img src="images/dumpling-king.png" alt="Dim Sum King"><div class="food-name">Dim Sum King</div><div class="food-type">Dumplings &amp; savory bites</div></a>
+<a class="food-card" href="https://akitagourmet.com/" target="_blank" rel="noopener"><img src="images/akita-sushi.jpeg" alt="Akita Sushi Gourmet"><div class="food-name">Akita Sushi</div><div class="food-type">Sushi &amp; Japanese favorites</div></a>
+<a class="food-card" href="https://brownedbutterbabe.com/" target="_blank" rel="noopener"><img src="images/browned-butter-babe.webp" alt="Browned Butter Babe Co."><div class="food-name">Browned Butter Babe Co.</div><div class="food-type">Fresh baked treats</div></a>
+<a class="food-card" href="https://www.instagram.com/churochi/" target="_blank" rel="noopener"><img src="images/churrochi.png" alt="Churrochi"><div class="food-name">Churrochi</div><div class="food-type">Churros &amp; sweet treats</div></a>
+</div></div></section>
+<section class="sponsors" id="sponsors"><h2>Thank You to Our Community Sponsors &amp; Partners</h2>
 <div class="premier"><span class="pill pill-green">Premier Sponsor</span><br><a href="https://www.goldenbank-na.com/" target="_blank" rel="noopener"><img src="images/golden-bank.png" alt="Golden Bank"></a></div>
 <div class="tier"><span class="pill pill-gold">Featured Sponsors</span></div>
 <div class="logo-grid featured">
