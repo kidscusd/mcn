@@ -60,6 +60,17 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 .ticket-guide-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#173f77;color:#fff;text-decoration:none;font-weight:900;font-size:17px;padding:14px 20px;border-radius:999px;box-shadow:0 5px 0 #0f2d58}
 
 
+
+.performers{padding:6px 0 28px}
+.performers h2{text-align:center;color:var(--red);font-size:40px;margin:0 0 8px}
+.performers .intro{text-align:center;color:#5c6a79;font-size:18px;margin:0 auto 20px;max-width:760px}
+.performer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.performer-card{background:#fff;border:2px solid #eee3d2;border-radius:22px;padding:15px;min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.05);overflow:hidden}
+.performer-card img{width:100%;height:105px;object-fit:contain}
+.performer-card .label{margin-top:10px;font-size:13px;font-weight:900;color:#33485c;line-height:1.22}
+.performer-card.dark{background:#111827;border-color:#27344a}
+.performer-card.dark .label{color:#fff}
+
 .sponsors{padding:10px 0 56px}
 .sponsors h2{text-align:center;color:var(--red);font-size:42px;margin:0 0 8px}
 .sponsors .note{text-align:center;color:#5c6a79;margin-bottom:28px;font-size:18px}
@@ -92,20 +103,29 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 }
 @media (max-width:980px){
   .date-grid,.ticket-grid,.logo-grid.featured{grid-template-columns:1fr 1fr}
+  .performer-grid{grid-template-columns:repeat(3,1fr)}
   .logo-grid.additional{grid-template-columns:repeat(3,1fr)}
   .ticket-grid .ticket-intro{grid-column:1/-1}
 }
 @media (max-width:680px){
   .topbar-inner{gap:16px}
   .top-links{gap:16px}
-  .date-grid,.ticket-grid,.logo-grid.featured,.logo-grid.additional{grid-template-columns:1fr}
+  .date-grid,.ticket-grid,.logo-grid.featured{grid-template-columns:1fr}
+  .performer-grid{grid-template-columns:repeat(2,1fr)}
+  .logo-grid.additional{grid-template-columns:repeat(2,1fr)}
   .date-box + .date-box{border-left:none;border-top:2px solid #e7b14a}
   .date-text{text-align:center}
   .date-box{flex-direction:column}
   .sponsor-ribbon{width:100%;justify-content:center}
   .ticket-banner{justify-content:center}
-  .logo-card,.logo-grid.featured .logo-card,.logo-grid.additional .logo-card{min-height:170px}
-  .logo-card img,.logo-grid.additional .logo-card img{height:92px}
+  .logo-card,.logo-grid.featured .logo-card{min-height:170px}
+  .logo-card img{height:92px}
+  .logo-grid.additional .logo-card{min-height:112px;padding:8px;border-radius:16px}
+  .logo-grid.additional .logo-card img{height:52px}
+  .logo-grid.additional .logo-card .label{font-size:10px;margin-top:6px}
+  .performer-card{min-height:150px;padding:10px}
+  .performer-card img{height:78px}
+  .performer-card .label{font-size:11px}
 }
 </style>
 </head>
@@ -113,7 +133,7 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <nav class="topbar"><div class="topbar-inner"><div class="top-links"><a href="#home">HOME</a><a href="#tickets">TICKETS</a><a href="#sponsors">SPONSORS</a><a href="#contact">CONTACT</a></div></div></nav>
 <header class="hero" id="home"><div class="wrap">
 <img class="banner" src="images/header.png" alt="CLIPCO Presents Multicultural Night 2026. Sept 25, 5pm - 8pm. Celebrating our diversity, Connecting our community. At John Muir Elementary.">
-<div class="flags">🌍 🎏 🇲🇽 🇮🇳 🇯🇵 🇬🇭 🇺🇸 🇨🇳 🇧🇷 🇨🇦 🇬🇧 🇵🇭 🇰🇷 🇮🇹</div>
+<div class="flags">🇺🇸 🇻🇳 🇳🇿 🇲🇾 🇺🇦 🇹🇼 🇮🇹 🇩🇴 🇰🇷 🇲🇲 🇨🇳 🇯🇵 🇲🇽 🇮🇳 🇵🇭 🇧🇷</div>
 <section class="family-section">
   <div class="family-main">Bring the whole family for an evening of culture, connection, and celebration!</div>
   <div class="family-divider">﹡ • ﹡</div>
@@ -126,10 +146,22 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 </section>
 </div></header>
 <main class="wrap">
-<section class="tickets-section" id="tickets"><div class="ticket-banner"><div class="sponsor-ribbon">★ BUY TICKETS ONLINE &amp; SAVE! ★</div><a class="ticket-button" href="#" onclick="return false">BUY TICKETS HERE</a></div>
+<section class="tickets-section" id="tickets"><div class="ticket-banner"><div class="sponsor-ribbon">★ BUY TICKETS ONLINE &amp; SAVE! ★</div><a class="ticket-button" href="https://clip-multicultural-night-2026.cheddarup.com/" target="_blank" rel="noopener">BUY TICKETS HERE</a></div>
 <div class="ticket-grid"><div class="ticket-intro"><h2>Event Tickets</h2><p>🎉 Pre-purchase ticket bundles at a <strong>discounted rate by September 21, 2026.</strong> On event day, tickets are available at the door at the regular price of <strong>$1 per ticket.</strong></p><p class="deadline">Don’t miss out on the discounted bundle pricing — online sales close September 21!</p></div>
 <div class="ticket-box ticket-guide-box"><h3>Ticket Price Guide</h3><p>See the latest ticket pricing and activity costs in our Google Slides guide.</p><a class="ticket-guide-button" href="https://docs.google.com/presentation/d/1aYCeMTzKS_j5bpuu9xtfE_QkU5Hsl33BLHts1XqKjdA/edit?usp=sharing" target="_blank" rel="noopener">📊 View Ticket Price Guide</a></div>
-<div class="ticket-box"><h3>Ticket pickup</h3><ul><li>Morning drop-off on <strong>September 23 and 24</strong></li><li>Or collect tickets at the <strong>event entry booth</strong> that night</li></ul></div></section>
+<div class="ticket-box"><h3>Ticket pickup</h3><ul><li>Morning drop-off on <strong>September 23 and 24</strong></li><li>Or collect tickets at the <strong>event entry booth</strong> that night</li></ul></div></div></section>
+
+<section class="performers" id="performers">
+  <h2>Performers</h2>
+  <div class="intro">Enjoy cultural performances from community groups and local performers throughout the evening.</div>
+  <div class="performer-grid">
+    <a class="performer-card" href="https://www.cpaasv.org/" target="_blank" rel="noopener"><img src="images/cpaa.png" alt="Chinese Performing Arts of America"><div class="label">Chinese Performing Arts of America</div></a>
+    <div class="performer-card"><img src="images/drumming-for-health.png" alt="Drumming for Health"><div class="label">Drumming for Health</div></div>
+    <a class="performer-card dark" href="https://www.85funstudio.com" target="_blank" rel="noopener"><img src="images/85fun.webp" alt="85 Fun Studio"><div class="label">85 Fun Studio</div></a>
+    <div class="performer-card"><img src="images/guest-performer.jpeg" alt="Taiwanese Bike Club"><div class="label">Taiwanese Bike Club</div></div>
+    <a class="performer-card" href="https://actaonline.org/profile/cambodian-cultural-dance-troupe-of-san-jose/" target="_blank" rel="noopener"><img src="images/cambodian-cultural-dance.png" alt="Cambodian Cultural Dance Troupe of San Jose"><div class="label">Cambodian Cultural Dance Troupe of San Jose</div></a>
+  </div>
+</section>
 <section class="sponsors" id="sponsors"><h2>Thank You to Our Community Sponsors &amp; Partners</h2>
 <div class="premier"><span class="pill pill-green">Premier Sponsor</span><br><a href="https://www.goldenbank-na.com/" target="_blank" rel="noopener"><img src="images/golden-bank.png" alt="Golden Bank"></a></div>
 <div class="tier"><span class="pill pill-gold">Featured Sponsors</span></div>
@@ -139,8 +171,6 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <a class="logo-card zoom-md" href="https://dimsumkingnow.com" target="_blank" rel="noopener"><img src="images/dumpling-king.png" alt="Dumpling King"><div class="label">Dumpling King</div></a>
 <a class="logo-card zoom-md" href="https://www.instagram.com/churochi/" target="_blank" rel="noopener"><img src="images/churrochi.png" alt="Churrochi"><div class="label">Churrochi</div></a>
 <a class="logo-card zoom-sm" href="https://akitagourmet.com/" target="_blank" rel="noopener"><img src="images/akita-sushi.jpeg" alt="Akita Sushi Gourmet"><div class="label">Akita Sushi Gourmet</div></a>
-<a class="logo-card" href="https://www.cpaasv.org/" target="_blank" rel="noopener"><img src="images/cpaa.png" alt="Chinese Performing Arts of America"><div class="label">Chinese Performing Arts of America</div></a>
-<a class="logo-card zoom-sm" href="#" onclick="return false"><img src="images/drumming-for-health.png" alt="Drumming for Health"><div class="label">Drumming for Health</div></a>
 </div>
 <div class="tier" style="margin-top:28px"><span class="pill pill-gold">Community Partners</span></div>
 <div class="logo-grid additional">
@@ -152,11 +182,12 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <a class="logo-card zoom-md" href="#" onclick="return false"><img src="images/colorful-impressions.jpeg" alt="Colorful Impressions"><div class="label">Colorful Impressions</div></a>
 <a class="logo-card zoom-md" href="https://geniusacademy.us" target="_blank" rel="noopener"><img src="images/genius-academy.jpg" alt="Genius Academy"><div class="label">Genius Academy</div></a>
 <a class="logo-card zoom-lg" href="https://us.elevateeducation.com/" target="_blank" rel="noopener"><img src="images/elevate.jpg" alt="Elevate Education"><div class="label">Elevate Education</div></a>
-<a class="logo-card zoom-lg" href="https://www.starbucks.com/" target="_blank" rel="noopener"><img src="images/starbucks.jpeg" alt="Starbucks"><div class="label">Starbucks</div></a>
 <a class="logo-card zoom-lg" href="https://www.homedepot.com/" target="_blank" rel="noopener"><img src="images/home-depot.png" alt="The Home Depot"><div class="label">The Home Depot</div></a>
 <a class="logo-card zoom-lg" href="https://www.cicerospizza.com/" target="_blank" rel="noopener"><img src="images/ciceros.gif" alt="Cicero's Pizza"><div class="label">Cicero's Pizza</div></a>
 <a class="logo-card zoom-lg" href="https://www.hmart.com/" target="_blank" rel="noopener"><img src="images/hmart.webp" alt="H Mart"><div class="label">H Mart</div></a>
 <a class="logo-card zoom-lg" href="https://www.costco.com/" target="_blank" rel="noopener"><img src="images/costco.png" alt="Costco Wholesale"><div class="label">Costco Wholesale</div></a>
+<a class="logo-card zoom-md" href="https://kumon123.com" target="_blank" rel="noopener"><img src="images/kumon.gif" alt="Kumon"><div class="label">Kumon</div></a>
+<a class="logo-card zoom-md" href="https://www.target.com/" target="_blank" rel="noopener"><img src="images/target.png" alt="Target"><div class="label">Target</div></a>
 </div></section>
 </main>
 <footer class="footer" id="contact"><div class="wrap"><div class="title">Multicultural Night 2026 · John Muir Elementary</div><div class="sub">Celebrating our diversity · Connecting our community</div></div></footer>
