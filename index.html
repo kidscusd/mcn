@@ -20,10 +20,9 @@ radial-gradient(circle at 92% 8%, rgba(198,50,54,.14) 0 3px, transparent 4px),
 radial-gradient(circle at 18% 58%, rgba(35,151,91,.16) 0 2px, transparent 3px),
 radial-gradient(circle at 84% 40%, rgba(65,116,220,.12) 0 2px, transparent 3px),
 linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
-.topbar{background:linear-gradient(180deg,#1e7a40 0%,#0f5f2f 100%);color:#fff;padding:10px 0 14px;box-shadow:0 2px 12px rgba(0,0,0,.12)}
-.topbar-inner{width:min(1200px,calc(100% - 28px));margin:auto;display:flex;flex-direction:column;align-items:center;gap:10px;font-weight:800;letter-spacing:.03em}
+.topbar{background:linear-gradient(180deg,#1e7a40 0%,#0f5f2f 100%);color:#fff;padding:14px 0;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.topbar-inner{width:min(1200px,calc(100% - 28px));margin:auto;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;font-weight:800;letter-spacing:.03em}
 .topbar a{color:#fff;text-decoration:none;font-size:15px}
-.top-logo img{display:block;height:56px;width:auto;max-width:min(90vw,320px)}
 .top-links{display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
 .wrap{width:min(1200px,calc(100% - 28px));margin:auto}
 .hero{padding:22px 0 10px;text-align:center;position:relative;overflow:hidden}
@@ -70,10 +69,10 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 .logo-grid.additional{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:4px}
 .logo-card{background:#fff;border:2px solid #eee3d2;border-radius:24px;padding:16px;min-height:205px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.05);overflow:hidden}
 .logo-grid.featured .logo-card{border-top:8px solid #f1b347;min-height:220px}
-.logo-grid.additional .logo-card{min-height:185px}
+.logo-grid.additional .logo-card{min-height:145px;padding:12px}
 .logo-card img{width:100%;height:114px;object-fit:contain;transition:transform .2s ease}
-.logo-grid.additional .logo-card img{height:98px}
-.logo-card .label{margin-top:12px;font-size:13px;font-weight:800;color:#65707d;text-align:center;line-height:1.25}
+.logo-grid.additional .logo-card img{height:62px}
+.logo-card .label{margin-top:10px;font-size:12px;font-weight:800;color:#65707d;text-align:center;line-height:1.22}
 .logo-card.zoom-sm img{transform:scale(1.12)}
 .logo-card.zoom-md img{transform:scale(1.22)}
 .logo-card.zoom-lg img{transform:scale(1.34)}
@@ -84,12 +83,16 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 .footer{background:linear-gradient(180deg,#176d38,#0f5c2f);color:#fff;text-align:center;padding:28px 0 34px}
 .footer .title{font-size:24px;font-weight:1000}
 .footer .sub{margin-top:6px;font-size:17px;opacity:.95}
+@media (max-width:1100px){
+  .logo-grid.additional{grid-template-columns:repeat(3,1fr)}
+}
 @media (max-width:980px){
-  .date-grid,.ticket-grid,.logo-grid.featured,.logo-grid.additional{grid-template-columns:1fr 1fr}
+  .date-grid,.ticket-grid,.logo-grid.featured{grid-template-columns:1fr 1fr}
+  .logo-grid.additional{grid-template-columns:repeat(3,1fr)}
   .ticket-grid .ticket-intro{grid-column:1/-1}
 }
 @media (max-width:680px){
-  .topbar-inner{gap:12px}
+  .topbar-inner{gap:16px}
   .top-links{gap:16px}
   .date-grid,.ticket-grid,.logo-grid.featured,.logo-grid.additional{grid-template-columns:1fr}
   .date-box + .date-box{border-left:none;border-top:2px solid #e7b14a}
@@ -103,7 +106,7 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="topbar-inner"><a class="top-logo" href="#home"><img src="images/clipco-logo.png" alt="CLIPCO"></a><div class="top-links"><a href="#home">HOME</a><a href="#tickets">TICKETS</a><a href="#sponsors">SPONSORS</a><a href="#contact">CONTACT</a></div></div></nav>
+<nav class="topbar"><div class="topbar-inner"><div class="top-links"><a href="#home">HOME</a><a href="#tickets">TICKETS</a><a href="#sponsors">SPONSORS</a><a href="#contact">CONTACT</a></div></div></nav>
 <header class="hero" id="home"><div class="wrap">
 <img class="banner" src="images/header.png" alt="CLIPCO Presents Multicultural Night 2026. Sept 25, 5pm - 8pm. Celebrating our diversity, Connecting our community. At John Muir Elementary.">
 <div class="flags">🌍 🎏 🇲🇽 🇮🇳 🇯🇵 🇬🇭 🇺🇸 🇨🇳 🇧🇷 🇨🇦 🇬🇧 🇵🇭 🇰🇷 🇮🇹</div>
