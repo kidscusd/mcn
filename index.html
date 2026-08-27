@@ -64,7 +64,7 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 .performers{padding:6px 0 28px}
 .performers h2{text-align:center;color:var(--red);font-size:40px;margin:0 0 8px}
 .performers .intro{text-align:center;color:#5c6a79;font-size:18px;margin:0 auto 20px;max-width:760px}
-.performer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.performer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1000px;margin:0 auto}
 .performer-card{background:#fff;border:2px solid #eee3d2;border-radius:22px;padding:15px;min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.05);overflow:hidden}
 .performer-card img{width:100%;height:105px;object-fit:contain}
 .performer-card .label{margin-top:10px;font-size:13px;font-weight:900;color:#33485c;line-height:1.22}
@@ -103,7 +103,7 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 }
 @media (max-width:980px){
   .date-grid,.ticket-grid,.logo-grid.featured{grid-template-columns:1fr 1fr}
-  .performer-grid{grid-template-columns:repeat(3,1fr)}
+  .performer-grid{grid-template-columns:repeat(2,1fr);max-width:720px}
   .logo-grid.additional{grid-template-columns:repeat(3,1fr)}
   .ticket-grid .ticket-intro{grid-column:1/-1}
 }
@@ -132,10 +132,10 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 </style>
 </head>
 <body>
-<nav class="topbar"><div class="topbar-inner"><div class="top-links"><a href="#home">HOME</a><a href="#tickets">TICKETS</a><a href="#sponsors">SPONSORS</a><a href="#contact">CONTACT</a></div></div></nav>
+<nav class="topbar"><div class="topbar-inner"><div class="top-links"><a href="#home">HOME</a><a href="#tickets">TICKETS</a><a href="#sponsors">SPONSORS</a><a href="mailto:ximin.sam@cusdclipco.org">CONTACT</a></div></div></nav>
 <header class="hero" id="home"><div class="wrap">
 <img class="banner" src="images/header.png" alt="CLIPCO Presents Multicultural Night 2026. Sept 25, 5pm - 8pm. Celebrating our diversity, Connecting our community. At John Muir Elementary.">
-<div class="flags"><span>🇺🇸</span> <span>🇻🇳</span> <span>🇳🇿</span> <span>🇲🇾</span> <span>🇺🇦</span> <span>🇹🇼</span> <span>🇮🇹</span> <span>🇩🇴</span> <span>🇰🇷</span> <span>🇲🇲</span> <span>🇨🇳</span> <span>🇯🇵</span> <span class="mobile-extra">🇲🇽</span> <span class="mobile-extra">🇮🇳</span> <span class="mobile-extra">🇵🇭</span> <span class="mobile-extra">🇧🇷</span></div>
+<div class="flags"><span>🇺🇸</span> <span>🇻🇳</span> <span>🇳🇿</span> <span>🇲🇾</span> <span>🇺🇦</span> <span>🇹🇼</span> <span>🇮🇹</span> <span>🇩🇴</span> <span>🇰🇷</span> <span>🇲🇲</span> <span>🇨🇳</span> <span>🇯🇵</span> <span>🇸🇬</span> <span class="mobile-extra">🇲🇽</span> <span class="mobile-extra">🇮🇳</span> <span class="mobile-extra">🇵🇭</span> <span class="mobile-extra">🇧🇷</span></div>
 <section class="family-section">
   <div class="family-main">Bring the whole family for an evening of culture, connection, and celebration!</div>
   <div class="family-divider">﹡ • ﹡</div>
@@ -172,6 +172,7 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <a class="logo-card zoom-md" href="https://dimsumkingnow.com" target="_blank" rel="noopener"><img src="images/dumpling-king.png" alt="Dumpling King"><div class="label">Dumpling King</div></a>
 <a class="logo-card zoom-md" href="https://www.instagram.com/churochi/" target="_blank" rel="noopener"><img src="images/churrochi.png" alt="Churrochi"><div class="label">Churrochi</div></a>
 <a class="logo-card zoom-sm" href="https://akitagourmet.com/" target="_blank" rel="noopener"><img src="images/akita-sushi.jpeg" alt="Akita Sushi Gourmet"><div class="label">Akita Sushi Gourmet</div></a>
+<div class="logo-card zoom-sm"><img src="images/marina.png" alt="Marina"><div class="label">Marina</div></div>
 </div>
 <div class="tier" style="margin-top:28px"><span class="pill pill-gold">Community Partners</span></div>
 <div class="logo-grid additional">
@@ -183,7 +184,6 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <a class="logo-card zoom-md" href="#" onclick="return false"><img src="images/colorful-impressions.jpeg" alt="Colorful Impressions"><div class="label">Colorful Impressions</div></a>
 <a class="logo-card zoom-md" href="https://geniusacademy.us" target="_blank" rel="noopener"><img src="images/genius-academy.jpg" alt="Genius Academy"><div class="label">Genius Academy</div></a>
 <a class="logo-card zoom-lg" href="https://us.elevateeducation.com/" target="_blank" rel="noopener"><img src="images/elevate.jpg" alt="Elevate Education"><div class="label">Elevate Education</div></a>
-<a class="logo-card zoom-lg" href="https://www.homedepot.com/" target="_blank" rel="noopener"><img src="images/home-depot.png" alt="The Home Depot"><div class="label">The Home Depot</div></a>
 <a class="logo-card zoom-lg" href="https://www.cicerospizza.com/" target="_blank" rel="noopener"><img src="images/ciceros.gif" alt="Cicero's Pizza"><div class="label">Cicero's Pizza</div></a>
 <a class="logo-card zoom-lg" href="https://www.hmart.com/" target="_blank" rel="noopener"><img src="images/hmart.webp" alt="H Mart"><div class="label">H Mart</div></a>
 <a class="logo-card zoom-lg" href="https://www.costco.com/" target="_blank" rel="noopener"><img src="images/costco.png" alt="Costco Wholesale"><div class="label">Costco Wholesale</div></a>
@@ -192,5 +192,5 @@ linear-gradient(180deg,#fffaf2 0%,#fff7eb 58%,#fffdf9 100%);}
 <a class="logo-card zoom-md" href="https://m.facebook.com/groups/213063422220519/?ref=share&amp;mibextid=wwXIfr" target="_blank" rel="noopener"><img src="images/guest-performer.jpeg" alt="Taiwanese Bike Club"><div class="label">Taiwanese Bike Club</div></a>
 </div></section>
 </main>
-<footer class="footer" id="contact"><div class="wrap"><div class="title">Multicultural Night 2026 · John Muir Elementary</div><div class="sub">Celebrating our diversity · Connecting our community</div></div></footer>
+<footer class="footer" id="contact"><div class="wrap"><div class="title">Multicultural Night 2026 · John Muir Elementary</div><div class="sub">Celebrating our diversity · Connecting our community · <a href="mailto:ximin.sam@cusdclipco.org" style="color:#fff;font-weight:800">ximin.sam@cusdclipco.org</a></div></div></footer>
 </body></html>
